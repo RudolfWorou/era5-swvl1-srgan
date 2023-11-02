@@ -1,0 +1,23 @@
+{
+    "dataset": {
+        "upscale_factor": 4,
+        "latitude_size": 450,
+        "longitude_size": 900,
+        "low_res_step": 0.4,
+        "high_res_step": 0.1,
+        "low_res_image_dim": 16,
+        "high_res_image_dim": 64
+    },
+    "dataloader": {
+        "batch_size": 32,
+        "num_workers": 4
+    },
+    "training": {
+        "alpha": 1e-3,
+        "generator_learning_rate": 1e-4,
+        "discriminator_learning_rate": 1e-4,
+        "number_of_epochs": 500,
+        "pre_training": "False",
+        "pre_train_number_of_epochs": 100
+    }
+}
