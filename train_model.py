@@ -38,7 +38,7 @@ def train_discriminator(
     discriminator_loss = real_pred_loss + fake_pred_loss
 
     # get loss
-    d_loss = discriminator_loss.item()
+    d_loss = discriminator_loss.item()*low_res.shape[0]
     # optimize only if training
     if not freeze:
         # reset the discriminator gradient
@@ -82,7 +82,7 @@ def train_generator(
     generator_loss = content_loss + alpha * adversarial_loss
 
     # get loss
-    g_loss = generator_loss.item()
+    g_loss = generator_loss.item()*high_res.shape[0]
 
     # optimize only if training
     if not freeze:
