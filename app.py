@@ -37,7 +37,7 @@ def main():
     if uploaded_file is not None:
         # Load and plot the input raster
         era5_raster = load_and_clean_raster(
-            "data/era5_31-12-2022.nc",
+            uploaded_file,
             tolerance=1e-6,
         )
 
