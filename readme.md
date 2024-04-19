@@ -113,6 +113,17 @@ pip install -r requirements.txt
 
 Run the notebook [era5_swvl1_sr.ipynb](era5_swvl1_sr.ipynb) to train the model or downscale ERA5 swvl1 data.
 
+4. Run the streamlit app
+
+```bash
+# Create a Docker image
+docker build -t <image_name>:version .
+
+# Run the container
+docker run -p 8501:8501 -it --rm <image_name>:version
+```
+The application can then be accessed in the browser by following the link http://localhost:8501.
+
 ## Acknowledgments
 Big thanks to everyone who has helped during this project.
 

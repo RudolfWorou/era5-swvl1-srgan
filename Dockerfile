@@ -11,10 +11,7 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose any necessary ports
-# EXPOSE <port>
+EXPOSE 8501
 
-# Define environment variable
-# ENV NAME value
-
-# Run script to start your application
-CMD ["python", "era5_swvl1_sr.py"]
+# Run script to start your application  
+CMD ["streamlit","run" ,"app.py"]
